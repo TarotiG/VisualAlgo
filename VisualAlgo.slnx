@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="VisualAlgo.Console/VisualAlgo.Console.csproj" />
+  <Project Path="VisualAlgo.Core/VisualAlgo.Core.csproj" />
+  <Project Path="VisualAlgo.Frontend/VisualAlgo.Frontend.csproj" />
+  <Project Path="VisualAlgo.Test/VisualAlgo.Test.csproj" />
+</Solution>

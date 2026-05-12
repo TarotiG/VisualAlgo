@@ -1,0 +1,77 @@
+## --- [ Gebruikelijke .NET mappen ] ---
+# Build resultaten
+[Bb]in/
+[Oo]bj/
+
+# Gebruikersspecifieke bestanden (Visual Studio)
+*.user
+*.userosscache
+*.sln.docstates
+
+# Roslyn temporary files
+.analyzerdata
+
+## --- [ IDE & Tools ] ---
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.opendb
+*.dbmdl
+
+# JetBrains (Rider / Resharper)
+_ReSharper*/
+*.[Rr]esharper
+*.DotSettings.user
+.idea/
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+## --- [ Project-specifieke uitsluitingen ] ---
+
+# MVC Project (Web)
+# Excludeert de bibliotheken die via Libman of npm binnenkomen
+wwwroot/lib/
+node_modules/
+*.log
+dist/
+
+# xUnit & Testen
+TestResults/
+*.suo
+*.user
+*.userosscache
+
+# Publicatie mappen
+publish/
+*.azurepubxml
+
+## --- [ OS-specifiek ] ---
+.DS_Store
+thumbs.db
+
+## --- [ Pakketbeheer ] ---
+# NuGet Packages
+*.nupkg
+# De globale packages folder hoeft niet in de repo
+**/[Pp]ackages/*
+!**/[Pp]ackages/repositories.config
+# Project-specific tool settings
+.tools/
+.config/dotnet-tools.json
+
+## --- [ Geheimen & Configuratie ] ---
+# Nooit secrets of lokale settings committen!
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+*.pfx
+*.publishsettings
