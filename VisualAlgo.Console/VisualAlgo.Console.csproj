@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VisualAlgo.Core\VisualAlgo.Core.csproj" />
+  </ItemGroup>
+
 </Project>
