@@ -1,16 +1,17 @@
-﻿using VisualAlgo.Core.Algorithms;
-using VisualAlgo.Core.Algorithms.SearchAlgorithms;
+﻿using VisualAlgo.Core.Algorithms.SearchAlgorithms;
 using VisualAlgo.Core.Algorithms.SortAlgorithms;
 
 public class Program
 {
     public static void Main(string[] args)
     {
+        // sort
         BubbleSort bubbleSort = new();
         SelectionSort selectionSort = new();
         InsertionSort insertionSort = new();
         QuickSort quickSort = new();
         
+        // search
         LinearSearch linearSearch = new();
         
         // data
