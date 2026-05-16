@@ -1,4 +1,5 @@
 ﻿using VisualAlgo.Core.Algorithms;
+using VisualAlgo.Core.Algorithms.SearchAlgorithms;
 using VisualAlgo.Core.Algorithms.SortAlgorithms;
 
 public class Program
@@ -10,41 +11,20 @@ public class Program
         InsertionSort insertionSort = new();
         QuickSort quickSort = new();
         
-        // data
-        int[] array = new[] { 3, 42, 45, 3, 22, 3, 5, 232, 5654, 643, 31, 323, 1, 456, 632, 34 };
+        LinearSearch linearSearch = new();
         
-        // execution
+        // data
+        int[] array = new[] { 3, 42, 45, 3, 22, 3, 5, 232, 5654, 643, 31, 323, 1, 456, 632, 34, 123,5436,76554,234,435634,87768,242,12,43254,7657,234,5456,31,12,1,465,7657,8768,989,786,786,75,87,345,65,214314543,6241,124235,56446,32,2131,43254657,22132,12543,563424,421312 };
+        
+        // execution sort
         int[] bubbleSorted = bubbleSort.Execute(array);
         int[] selectionSorted = selectionSort.Execute(array);
         int[] insertionSorted = insertionSort.Execute(array);
         int[] quickSorted = quickSort.Execute(array);
         
-        // Console.WriteLine("#### Starting loop for Bubble Sort");
-        // foreach (int i in bubbleSorted)
-        // {
-        //     Console.WriteLine(i);
-        // }
-        // Console.WriteLine("####  End of Bubble Sort");
-        //
-        // Console.WriteLine("#### Starting loop for Selection Sort");
-        // foreach (int i in selectionSorted)
-        // {
-        //     Console.WriteLine(i);
-        // }
-        // Console.WriteLine("####  End of Selection Sort");
-        
-        Console.WriteLine("#### Starting loop for Insertion Sort");
-        foreach (int i in insertionSorted)
-        {
-            Console.WriteLine(i);
-        }
-        Console.WriteLine("####  End of Insertion Sort");
-        
-        Console.WriteLine("#### Starting loop for Quick Sort");
-        foreach (int i in insertionSorted)
-        {
-            Console.WriteLine(i);
-        }
-        Console.WriteLine("####  End of Quick Sort");
+        // execution search
+        int target = 75;
+        int linearSearchIndex = linearSearch.Execute(array, target);
+        Console.WriteLine($"Target: {target} found at index: {linearSearchIndex}");
     }
 }

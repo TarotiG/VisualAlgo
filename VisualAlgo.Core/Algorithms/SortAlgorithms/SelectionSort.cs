@@ -5,6 +5,8 @@ namespace VisualAlgo.Core.Algorithms.SortAlgorithms;
 public class SelectionSort : Algorithm
 {
     public override T[] Execute<T>(T[] array) => Sort<T>(array);
+    
+    public override int Execute<T>(T[] array, T target) => throw new NotImplementedException();
 
     private static T[] Sort<T>(T[] array) where T : IComparable<T>
     {

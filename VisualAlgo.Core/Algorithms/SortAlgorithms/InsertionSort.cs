@@ -5,6 +5,8 @@ namespace VisualAlgo.Core.Algorithms.SortAlgorithms;
 public class InsertionSort : Algorithm
 {
     public override T[] Execute<T>(T[] input) => Sort<T>(input);
+    
+    public override int Execute<T>(T[] array, T target) => throw new NotImplementedException();
 
     private static T[] Sort<T>(T[] array) where T : IComparable<T>
     {

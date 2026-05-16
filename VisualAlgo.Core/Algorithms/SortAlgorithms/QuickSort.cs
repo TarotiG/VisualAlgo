@@ -6,6 +6,8 @@ namespace VisualAlgo.Core.Algorithms.SortAlgorithms;
 public class QuickSort : Algorithm
 {
     public override T[] Execute<T>(T[] input) => Sort(input, 0, input.Length - 1);
+    
+    public override int Execute<T>(T[] array, T target) => throw new NotImplementedException();
 
     private T[] Sort<T>(T[] array, int low, int high) where T : IComparable<T>
     {
