@@ -18,4 +18,5 @@ public class BinarySearch : SearchAlgorithm
 // * Is `lijst[midden] == doel`? Return `midden`.
 // * Is `lijst[midden] < doel`? `links = midden + 1`.
 // * Anders: `rechts = midden - 1`.
-// 3.  *Visualisatie:* Maak het gebied dat 'geëlimineerd' wordt grijs.
+// 3a.  *Visualisatie:* Maak het gebied dat 'geëlimineerd' wordt grijs.
+// 3b.  *Visualisatie:* Leuk om te laten zien hoe sortering de tijdscomplexiteit kan beinvloeden.
