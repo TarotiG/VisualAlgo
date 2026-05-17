@@ -5,6 +5,11 @@ namespace VisualAlgo.Core.Algorithms.SearchAlgorithms;
 public class BinarySearch : SearchAlgorithm
 {
     public override int Execute<T>(T[] array, T target) => throw new NotImplementedException();
+
+    private int Search<T>(T[] array, T target) where T : IComparable<T>
+    {
+        throw new NotImplementedException();
+    }
 }
 
 // 1.  Stel `links = 0` en `rechts = n-1`.
