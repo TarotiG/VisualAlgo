@@ -18,4 +18,13 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Algorithms\PathfindingAlgorithms\" />
+    <Folder Include="Algorithms\SearchAlgorithms\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VisualAlgo.Core\VisualAlgo.Core.csproj" />
+  </ItemGroup>
+
 </Project>
