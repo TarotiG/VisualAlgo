@@ -1,4 +1,5 @@
 using VisualAlgo.Core.Abstractions;
+using VisualAlgo.Core.Exceptions;
 
 namespace VisualAlgo.Core.Algorithms.SearchAlgorithms;
 
@@ -8,7 +9,20 @@ public class BinarySearch : SearchAlgorithm
 
     private int Search<T>(T[] array, T target) where T : IComparable<T>
     {
-        throw new NotImplementedException();
+        int left = 0;
+        int right = array.Length - 1;
+
+        while (left <= right)
+        {
+            int middle = left + (right - left) / 2;
+            
+            if (array[middle].CompareTo(target) == 0) return middle;
+            
+            if (array[middle].CompareTo(target) < 0) left = middle + 1;
+            else right = middle - 1;
+        }
+        
+        throw new SearchTargetNotFoundException($"Target: {target} not found in array");
     }
 }
 
