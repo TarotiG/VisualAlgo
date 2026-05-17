@@ -5,7 +5,10 @@ namespace VisualAlgo.Core.Algorithms.SearchAlgorithms;
 
 public class BinarySearch : SearchAlgorithm
 {
-    public override int Execute<T>(T[] array, T target) => throw new NotImplementedException();
+    public override int Execute<T>(T[] array, T target)
+    {
+        return Search(array, target);
+    }
 
     private int Search<T>(T[] array, T target) where T : IComparable<T>
     {
@@ -20,6 +23,7 @@ public class BinarySearch : SearchAlgorithm
             
             if (array[middle].CompareTo(target) < 0) left = middle + 1;
             else right = middle - 1;
+            StepCounter++;
         }
         
         throw new SearchTargetNotFoundException($"Target: {target} not found in array");

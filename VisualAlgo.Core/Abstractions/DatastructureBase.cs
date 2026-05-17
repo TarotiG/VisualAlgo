@@ -1,6 +1,6 @@
 namespace VisualAlgo.Core.Abstractions;
 
-public abstract class Datastructure
+public abstract class DatastructureBase
 {
     public abstract void Execute();
 }

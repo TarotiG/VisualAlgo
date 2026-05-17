@@ -19,6 +19,7 @@ public class LinearSearch : SearchAlgorithm
         {
             if (array[i].CompareTo(target) == 0)
             {
+                StepCounter = i;
                 return i;
             }
         }
