@@ -3,14 +3,12 @@ using VisualAlgo.Core.Exceptions;
 
 namespace VisualAlgo.Core.Algorithms.SearchAlgorithms;
 
-public class LinearSearch : Algorithm
+public class LinearSearch : SearchAlgorithm
 {
     public override int Execute<T>(T[] array, T target)
     {
         return Search(array, target);
     }
-    
-    public override T[] Execute<T>(T[] array) => throw new NotImplementedException();
 
     private int Search<T>(T[] array, T target) where T : IComparable<T>
     {

@@ -27,5 +27,9 @@ public class Program
         int target = 75;
         int linearSearchIndex = linearSearch.Execute(array, target);
         Console.WriteLine($"Target: {target} found at index: {linearSearchIndex}");
+        
+        // Algorithms speeds
+        Console.WriteLine($"Sort Algorithm speed: {bubbleSort.MeasureSortAlgorithmSpeed(array, bubbleSort.Execute)}");
+        Console.WriteLine($"Search Algorithm speed: {linearSearch.MeasureSearchAlgorithmSpeed(array, target, linearSearch.Execute)}");
     }
 }

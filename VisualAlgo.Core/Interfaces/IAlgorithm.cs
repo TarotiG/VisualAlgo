@@ -2,7 +2,9 @@ namespace VisualAlgo.Core;
 
 public interface IAlgorithm
 {
-    string MeasureAlgorithmSpeed<T>(T[] array) where T : IComparable<T>;
+    public string MeasureSortAlgorithmSpeed<T>(T[] array, Func<T[], T[]> executor) where T : IComparable<T>;
+    
+    string MeasureSearchAlgorithmSpeed<T>(T[] array, T target, Func<T[], T, T> executor) where T : IComparable<T>;
     
     void VisualizeAlgorithmExecution();
     

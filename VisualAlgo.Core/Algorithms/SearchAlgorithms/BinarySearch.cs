@@ -2,10 +2,8 @@ using VisualAlgo.Core.Abstractions;
 
 namespace VisualAlgo.Core.Algorithms.SearchAlgorithms;
 
-public class BinarySearch : Algorithm
+public class BinarySearch : SearchAlgorithm
 {
-    public override T[] Execute<T>(T[] array) => throw new NotImplementedException();
-    
     public override int Execute<T>(T[] array, T target) => throw new NotImplementedException();
 }
 
