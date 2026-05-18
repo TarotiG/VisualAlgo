@@ -10,9 +10,17 @@ public class QuickSortTests
     public void QuickSort_Sorts_Array()
     {
         QuickSort quickSort = new();
-        // int[] sorted = quickSort.Execute(Testdata);
-        Assert.True(quickSort.Execute(Testdata).SequenceEqual(Testdata));
+        int[] sorted = quickSort.Execute(Testdata);
         
-        // Assert.False(sorted.SequenceEqual(Testdata));
+        Assert.False(sorted.SequenceEqual(Testdata));
+    }
+    
+    [Fact]
+    public void QuickSort_Sort_ThrowsOnNull()
+    {
+        string[] data = null;
+        QuickSort quickSort = new();
+        
+        Assert.Throws<ArgumentNullException>(() => quickSort.Execute(data));
     }
 }

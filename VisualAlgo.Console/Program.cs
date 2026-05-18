@@ -27,7 +27,7 @@ public class Program
         // execution search
         int target = 75;
         int linearSearchIndex = linearSearch.Execute(array, target);
-        int binarySearchIndex = binarySearch.Execute(array, target);
+        int binarySearchIndex = binarySearch.Execute(bubbleSorted, target);
         Console.WriteLine($"Target: {target} found at index: {linearSearchIndex} using linear search algorithm");
         Console.WriteLine($"Target: {target} found at index: {binarySearchIndex} using binary search algorithm");
         Console.WriteLine(linearSearch.GetStepCounter());

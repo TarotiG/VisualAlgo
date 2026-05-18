@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <Folder Include="Algorithms\PathfindingAlgorithms\" />
-    <Folder Include="Algorithms\SearchAlgorithms\" />
   </ItemGroup>
 
   <ItemGroup>

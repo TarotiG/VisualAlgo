@@ -12,6 +12,8 @@ public class BinarySearch : SearchAlgorithm
 
     private int Search<T>(T[] array, T target) where T : IComparable<T>
     {
+        if (array == null || array.Length == 0) throw  new ArgumentNullException(nameof(array));
+        
         int left = 0;
         int right = array.Length - 1;
 

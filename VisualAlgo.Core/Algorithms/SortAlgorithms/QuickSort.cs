@@ -5,19 +5,25 @@ namespace VisualAlgo.Core.Algorithms.SortAlgorithms;
 
 public class QuickSort : SortAlgorithm
 {
-    public override T[] Execute<T>(T[] input) => Sort(input, 0, input.Length - 1);
+    public override T[] Execute<T>(T[] input)
+    {
+        if (input == null || input.Length == 0) throw new ArgumentNullException(nameof(input));
+        return Sort(input, 0, input.Length - 1);
+    }
+    
 
     private T[] Sort<T>(T[] array, int low, int high) where T : IComparable<T>
     {
+        T[] result = [..array];
         if (low < high)
         {
-            int pivotIndex = Partition(array, low, high);
+            int pivotIndex = Partition(result, low, high);
             
-            Sort(array, low, pivotIndex - 1);
-            Sort(array, pivotIndex + 1, high);
+            Sort(result, low, pivotIndex - 1);
+            Sort(result, pivotIndex + 1, high);
         }
 
-        return array;
+        return result;
     }
 
     private int Partition<T>(T[] array, int  low, int high) where T : IComparable<T>

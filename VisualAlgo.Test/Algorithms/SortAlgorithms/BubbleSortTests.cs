@@ -15,4 +15,13 @@ public class BubbleSortTests
         
         Assert.False(sorted.SequenceEqual(Testdata));
     }
+    
+    [Fact]
+    public void BubbleSort_Sort_ThrowsOnNull()
+    {
+        string[] data = null;
+        BubbleSort bubbleSort = new();
+        
+        Assert.Throws<ArgumentNullException>(() => bubbleSort.Execute(data));
+    }
 }

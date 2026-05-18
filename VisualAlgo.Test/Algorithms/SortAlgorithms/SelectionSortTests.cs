@@ -14,4 +14,13 @@ public class SelectionSortTests
         
         Assert.False(sorted.SequenceEqual(Testdata));
     }
+    
+    [Fact]
+    public void SelectionSort_Sort_ThrowsOnNull()
+    {
+        string[] data = null;
+        SelectionSort selectionSort = new();
+        
+        Assert.Throws<ArgumentNullException>(() => selectionSort.Execute(data));
+    }
 }

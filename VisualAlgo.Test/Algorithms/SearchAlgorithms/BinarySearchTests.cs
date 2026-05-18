@@ -1,0 +1,39 @@
+using VisualAlgo.Core.Algorithms.SearchAlgorithms;
+using VisualAlgo.Core.Algorithms.SortAlgorithms;
+using VisualAlgo.Core.Exceptions;
+
+namespace VisualAlgo.Test.Algorithms.SearchAlgorithms;
+
+public class BinarySearchTests
+{
+    private int[] Testdata = new[] { 3, 42, 45, 3, 22, 3, 5, 232, 5654, 643, 31, 323, 1, 456, 632, 34, 123,5436,76554,234,435634,87768,242,12,43254,7657,234,5456,31,12,1,465,7657,8768,989,786,786,75,87,345,65,214314543,6241,124235,56446,32,2131,43254657,22132,12543,563424,421312 };
+
+    [Fact]
+    public void BinarySearch_FindsTarget()
+    {
+        BinarySearch binarySearch = new();
+        BubbleSort bubbleSort = new();
+        int[] sorted = bubbleSort.Execute(Testdata);
+        int target = 75;
+
+        Assert.True(binarySearch.Execute(sorted, target) == 16);
+    }
+    
+    [Fact]
+    public void BinarySearch_ThrowsWhenTargetIsNotInArray()
+    {
+        BinarySearch binarySearch = new();
+        int target = int.MaxValue;
+        Assert.Throws<SearchTargetNotFoundException>(() => binarySearch.Execute(Testdata, target));
+    }
+
+    [Fact]
+    public void BinarySearch_ThrowsWhenArrayIsEmptyOrNull()
+    {
+        BinarySearch binarySearch = new();
+        int[] array = null;
+        int target = 75;
+        
+        Assert.Throws<ArgumentNullException>(() => binarySearch.Execute(array, target));
+    }
+}

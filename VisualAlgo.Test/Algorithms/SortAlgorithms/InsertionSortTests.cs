@@ -14,4 +14,13 @@ public class InsertionSortTests
         
         Assert.False(sorted.SequenceEqual(Testdata));
     }
+    
+    [Fact]
+    public void IsertionSort_Sort_ThrowsOnNull()
+    {
+        string[] data = null;
+        InsertionSort insertionSort = new();
+        
+        Assert.Throws<ArgumentNullException>(() => insertionSort.Execute(data));
+    }
 }
